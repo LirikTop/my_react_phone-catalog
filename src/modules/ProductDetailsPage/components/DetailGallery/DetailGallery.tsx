@@ -13,10 +13,20 @@ interface Props {
 
 export const DetailGallery: React.FC<Props> = React.memo(({ images }) => {
   const isTabletOrLarger = useMediaQuery({ query: '(min-width: 640px)' });
-  const galleryImages = images.map(imgPath => ({
-    original: `/${imgPath}`, // або повний шлях якщо потрібно
-    thumbnail: `/${imgPath}`,
-  }));
+  const baseUrlRaw = import.meta.env.BASE_URL;
+
+  const baseUrl = baseUrlRaw.endsWith('/')
+    ? baseUrlRaw.slice(0, -1)
+    : baseUrlRaw;
+
+  const galleryImages = images.map(imgPath => {
+    const cleanPath = imgPath.startsWith('/') ? imgPath.slice(1) : imgPath;
+
+    return {
+      original: `${baseUrl}/${cleanPath}`,
+      thumbnail: `${baseUrl}/${cleanPath}`,
+    };
+  });
 
   return (
     <ImageGallery

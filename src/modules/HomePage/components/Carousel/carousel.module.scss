@@ -57,12 +57,12 @@
 
     &--prev {
       left: 0;
-      background-image: url('src/assets/nav-prev.svg');
+      background-image: url('/assets/nav-prev.svg');
     }
 
     &--next {
       right: 0;
-      background-image: url('src/assets/nav-next.svg');
+      background-image: url('/assets/nav-next.svg');
     }
   }
 
@@ -81,14 +81,13 @@
   :global(.swiper-pagination-bullet) {
     width: 14px;
     height: 4px;
-    background-color: $pagination-bg-color;
+    background-color: $elements;
     border-radius: 2px;
     opacity: 1;
     transition: background-color 0.3s ease;
   }
 
   :global(.swiper-pagination-bullet-active) {
-    background-color: $pagination-bg-color-active;
-    width: 20px;
+    background-color: $primery;
   }
 }

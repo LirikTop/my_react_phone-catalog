@@ -32,25 +32,6 @@ export const CardsCariusel: React.FC<Props> = React.memo(
         <div className={cn(carouselClass['card-carousel__top'], 'container')}>
           <h2 className={cn(carouselClass['card-carousel__title'])}>{title}</h2>
           <div className={cn(carouselClass['card-carousel__nav-content'])}>
-            {/* <div
-              ref={prevRef}
-              className={cn(carouselClass['card-carousel__nav-wrapper'], {
-                [carouselClass['card-carousel__nav-wrapper--disabled']]:
-                  isBeginning,
-              })}
-            >
-              <div
-                className={cn(
-                  carouselClass['card-carousel__nav'],
-                  carouselClass['card-carousel__nav--prev'],
-                  {
-                    [carouselClass['card-carousel__nav--disabled']]:
-                      isBeginning,
-                  },
-                )}
-              ></div>
-            </div> */}
-
             <div
               ref={prevRef}
               className={cn(
@@ -60,23 +41,6 @@ export const CardsCariusel: React.FC<Props> = React.memo(
             >
               <IconButton iconName={IconEnum.arrow} isDisabled={isBeginning} />
             </div>
-            {/* <div
-              ref={nextRef}
-              className={cn(carouselClass['card-carousel__nav-wrapper'], {
-                [carouselClass['card-carousel__nav-wrapper--disabled']]: isEnd,
-              })}
-            >
-              <div
-                // ref={nextRef}
-                className={cn(
-                  carouselClass['card-carousel__nav'],
-                  carouselClass['card-carousel__nav--next'],
-                  {
-                    [carouselClass['card-carousel__nav--disabled']]: isEnd,
-                  },
-                )}
-              ></div>
-            </div> */}
             <div
               ref={nextRef}
               className={cn(
@@ -95,10 +59,6 @@ export const CardsCariusel: React.FC<Props> = React.memo(
             grabCursor={true}
             spaceBetween={16}
             slidesPerView="auto"
-            // navigation={{
-            //   nextEl: `.${carouselClass['card-carousel__nav--next']}`,
-            //   prevEl: `.${carouselClass['card-carousel__nav--prev']}`,
-            // }}
             onInit={instance => {
               const swiper = instance;
 
