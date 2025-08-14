@@ -18,7 +18,7 @@ Developed a responsive phone catalog web application with product listing, sorti
 
 ## Links
 
-- [DEMO LINK](https://LirikTop.github.io/react_phone-catalog/)
+- [DEMO LINK](https://LirikTop.github.io/my_react_phone-catalog/)
 - [Figma design](https://www.figma.com/design/T5ttF21UnT6RRmCQQaZc6L/Phone-catalog--V2--Original?node-id=15875-34648&t=jjIcyGo69EqrSrho-0)
 
 ## Instructions
