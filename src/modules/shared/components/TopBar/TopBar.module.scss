@@ -76,13 +76,13 @@
       box-shadow: 0 0 0 8px #00000026;
     }
 
-    &:checked:hover::before {
-      box-shadow: 0 0 0 8px #ec489926;
-    }
-
     &:checked::before {
       transform: translateX(100%);
       border-color: #ec4899;
+    }
+
+    &:checked:hover::before {
+      box-shadow: 0 0 0 8px #ec489926;
     }
   }
 }
