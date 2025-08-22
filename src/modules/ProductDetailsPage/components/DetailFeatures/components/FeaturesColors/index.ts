@@ -1,1 +1,0 @@
-export { FeaturesColors } from './FeaturesColors';
